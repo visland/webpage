@@ -1,0 +1,229 @@
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:italic,bold,bolditalic,100,200,300,400,500,600,800,900&display=swap');
+
+$dark-pink: #DF4459;
+$regular-pink: rgb(211, 127, 138);
+$light-pink: rgb(241, 227, 229);
+
+body {
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: large !important;
+}
+
+.quote {
+  fill:$dark-pink;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: 25px;
+  top: 25px;
+  z-index: 15;
+  opacity: 0.8;
+
+  -webkit-transform: rotate(180deg);     /* Chrome and other webkit browsers */
+  -moz-transform: rotate(180deg);        /* FF */
+  -o-transform: rotate(180deg);          /* Opera */
+  -ms-transform: rotate(180deg);         /* IE9 */
+  transform: rotate(180deg); 
+  /* IE8 and below */
+  filter: progid:DXImageTransform.Microsoft.Matrix(M11=-1, M12=0, M21=0, M22=-1, DX=0, DY=0, SizingMethod='auto expand');
+}
+
+
+.recomText {
+  z-index: 30;
+  margin: 15px 0 0 35px;
+  @media screen and (max-width: 767px) {
+    margin: 35px 0 0 0 !important;
+  }
+}
+
+/* Modify existing bootestrap style */
+.btn-outline-primary {
+  color: $dark-pink !important;
+  border-color: $dark-pink !important;
+  &:hover {
+    background-color: $dark-pink !important;
+    color: white !important;
+    border-color: white !important;
+  }
+  &:focus {
+    box-shadow:  0 0 0.2rem $dark-pink !important;
+  }
+}
+
+.btn {
+  border-radius: 20px !important;
+  padding: 5px 16px !important;
+  margin: 5px 5px 0 0;
+}
+
+.btn-small {
+  border-radius: 15px !important;
+  padding: 2px 6px !important;
+  font-size: 0.9rem !important;
+}
+
+/* Layout */
+.section {
+  padding: 50px 0 !important;
+  @media screen and (max-width: 767px) {
+    padding: 20px 20px !important;
+  }
+}
+
+.topPad {
+  padding-top: 80px !important;
+}
+
+.pink {
+  background-color: $light-pink;
+}
+
+.center-row {
+  justify-content: center;
+}
+
+/* Card */
+.contentCard {
+  margin: 0 150px;
+  padding: 20px 50px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 8px rgba(0, 0, 0, 0.05);
+  border: none;
+  @media screen and (max-width: 767px) {
+    padding: 20px 10px !important; 
+    margin: 0 10px !important;
+  }
+}
+
+.certi-card {
+  .card-body {
+    padding: 0.9rem !important;
+  }
+  .card-title {
+    font-size: 1rem !important;
+    margin-bottom: 0.3rem !important;
+    font-weight: bold !important;
+  }
+  .card-text {
+    font-size: 0.9rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+  .card-img {
+    opacity: 0.8;
+    -webkit-filter: grayscale(10%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(10%);
+  }
+  width: 14rem;
+  margin: 5px;
+}
+
+/* Text Styles */
+.rightText {
+  text-align: right;
+}
+
+.pinkBold {
+  font-weight: bold;
+  color: $regular-pink;
+}
+
+.darkBold {
+  font-weight: bold;
+  color: $dark-pink;
+}
+
+.email {
+  color: black;
+  text-decoration: underline;
+  &:hover, &:focus {
+    color: black;
+    text-decoration: underline;
+  }
+}
+
+.publish {
+  color: $dark-pink;
+  text-decoration: underline;
+  &:hover, &:focus {
+    color: $dark-pink;
+    text-decoration: underline;
+  }
+}
+
+.subTitle {
+  text-align: center;
+  color: gray;
+  margin: 30px 0;
+}
+
+.footerText {
+  text-align: center;
+  color: gray;
+  margin: 30px 0;
+}
+
+.project-title {
+  color: $dark-pink;
+  padding: 5px 0;
+  font-weight: 700;
+}
+
+.project-subtitle {
+  color: $regular-pink;
+  font-style: italic;
+}
+
+.section-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+
+  .section-title-text {
+    margin-left: 10px;
+    font-weight: 800;
+  }
+
+  .dot {
+    height: 20px;
+    width: 20px;
+    background-color: $dark-pink;
+    border-radius: 50%;
+  }
+}
+
+.scrollTop {
+  position: fixed; 
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  cursor: pointer;
+  animation: fadeIn 0.3s;
+  transition: opacity 0.4s;
+  opacity: 0.5;
+  fill: $regular-pink;
+}
+
+.scrollTop:hover{
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .certi-card {
+    width: 45% !important;
+  }
+
+  .noMobile {
+    display: none;
+  }
+}
